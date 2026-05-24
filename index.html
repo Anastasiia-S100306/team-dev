@@ -19,11 +19,59 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/team-dev/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-BfsCnGXl.css">
+    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-BFmeKfwN.css">
   </head>
   <body>
-    <header class="header"></header>
-  
+    
+<header class="header">
+  <div class="header__container">
+    <!-- Логотип сайту -->
+    <a
+      href="./index.html"
+      class="header__logo"
+      aria-label="Головна сторінка Солодка майстерня"
+    >
+      <img
+        src="../img/header/header-logo.svg"
+        alt="Логотип Солодка майстерня"
+        width="145"
+        height="31"
+      />
+    </a>
+
+    <nav class="header__nav" id="js-nav-menu" aria-label="Основна навігація">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#sweets" class="header__menu-link">Солодощі</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#about" class="header__menu-link">Про нас</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#reviews" class="header__menu-link">Відгуки</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#faq" class="header__menu-link">Часті питання</a>
+        </li>
+      </ul>
+      <a href="#sweets" class="header__btn btn-primary">До покупок</a>
+    </nav>
+
+    <button
+      class="header__burger"
+      id="js-burger-toggle"
+      aria-expanded="false"
+      aria-controls="js-nav-menu"
+      aria-label="Відкрити меню навігації"
+    >
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+  </div>
+</header>
+
+
     
     <main>
       <!-- Loads the specified .html file -->
