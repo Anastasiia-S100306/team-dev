@@ -63,7 +63,7 @@ import{T as M,S as f,N as p,P as w,A as S}from"./assets/vendor-D0Gu3XxZ.js";(fun
         ${i}
       </h3>
     </li>
-  `}function V(e){L.innerHTML=e.map(N).join("")}function W(){new f(".reviews-swiper",{modules:[p,w],slidesPerView:1,spaceBetween:16,grabCursor:!0,watchOverflow:!0,navigation:{nextEl:".reviews-btn-next",prevEl:".reviews-btn-prev"},pagination:{el:".reviews-pagination",clickable:!0},breakpoints:{768:{slidesPerView:3,spaceBetween:16},1158:{slidesPerView:3,spaceBetween:24}}})}async function z(){try{const e=await q();console.log(e);const t=Array.isArray(e)?e:e.feedbacks;if(!t)throw new Error("Feedbacks not found");const s=t.slice(0,10);V(s),W()}catch(e){console.error(e),L.innerHTML=`
+  `}function V(e){L.innerHTML=e.map(N).join("")}function W(){new f(".reviews-swiper",{modules:[p,w],slidesPerView:1,spaceBetween:16,grabCursor:!0,watchOverflow:!0,navigation:{nextEl:".reviews-btn-next",prevEl:".reviews-btn-prev"},pagination:{el:".reviews-pagination",clickable:!0},breakpoints:{768:{slidesPerView:3,spaceBetween:16},1158:{slidesPerView:3,spaceBetween:32}}})}async function z(){try{const e=await q();console.log(e);const t=Array.isArray(e)?e:e.feedbacks;if(!t)throw new Error("Feedbacks not found");const s=t.slice(0,10);V(s),W()}catch(e){console.error(e),L.innerHTML=`
       <li class="reviews-error">
         Не вдалося завантажити відгуки. Спробуйте пізніше.
       </li>
