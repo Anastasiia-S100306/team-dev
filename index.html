@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/team-dev/index.js"></script>
     <link rel="modulepreload" crossorigin href="/team-dev/assets/vendor-BKIdrPGI.js">
     <link rel="stylesheet" crossorigin href="/team-dev/assets/vendor-XYtvLfmp.css">
-    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-CQ81v4S2.css">
+    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-BTfBVVgJ.css">
   </head>
   <body>
     <header class="header">
@@ -151,7 +151,88 @@
 
     <!-- Modals -->
     
-    
+    <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Десерти — замовити онлайн</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Наші десерти</h1>
+  <p>Натисніть на десерт, щоб замовити</p>
+</header>
+
+<div class="grid" id="productGrid"></div>
+
+<!-- PRODUCT MODAL -->
+<div class="overlay" id="overlay1" onclick="handleOverlay1Click(event)">
+  <div class="modal" id="productModal">
+    <button class="modal-close" onclick="closeModal1()">×</button>
+    <div class="modal-img" id="modalImg"></div>
+  <!--если что звоните\пишите в тг-->
+    <div class="modal-body">
+      <div class="modal-title" id="modalName"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="stars" id="modalStars"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-ingredients" id="modalIngr"></div>
+
+      <button class="btn-order" onclick="openModal2()">
+        Перейти до замовлення
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="overlay" id="overlay2" onclick="handleOverlay2Click(event)">
+  <div class="modal" id="contactModal">
+    <button class="modal-close" onclick="closeModal2()">×</button>
+
+    <div class="modal-inner">
+      <div class="modal-title">Оформлення замовлення</div>
+      <div class="modal-subtitle" id="orderSubtitle"></div>
+
+      <div id="orderForm">
+        <div class="form-group">
+          <label class="form-label">Ім'я <span class="req">*</span></label>
+          <input class="form-input" id="nameInput" type="text" placeholder="Вікторія">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Телефон <span class="req">*</span></label>
+          <input class="form-input" id="phoneInput" type="tel" placeholder="38 0__ ___-__-__">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Коментар <span class="req">*</span></label>
+          <textarea class="form-textarea" id="commentInput" placeholder="Ваш коментар"></textarea>
+        </div>
+
+        <button class="btn-submit" onclick="submitOrder()">
+          Надіслати заявку
+        </button>
+      </div>
+
+      <div class="success-msg" id="successMsg">
+        <div class="icon">🎉</div>
+        <h3>Заявку надіслано!</h3>
+        <p>Ми зателефонуємо вам найближчим часом.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
     
 
     <span class="loader-backdrop is-hidden"></span>
