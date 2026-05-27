@@ -501,37 +501,11 @@
 
     <!-- Modals -->
     
-    <div class="grid" id="productGrid"></div>
-
-<!-- PRODUCT MODAL -->
-<div class="overlay" id="overlay1" onclick="handleOverlay1Click(event)">
-  <div class="modal" id="productModal">
-    <button class="modal-close" onclick="closeModal1()">×</button>
-    <div class="modal-img" id="modalImg"></div>
-    <!--если что звоните\пишите в тг-->
-    <div class="modal-body">
-      <div class="modal-title" id="modalName"></div>
-      <div class="modal-price" id="modalPrice"></div>
-      <div class="stars" id="modalStars"></div>
-      <div class="modal-desc" id="modalDesc"></div>
-      <div class="modal-ingredients" id="modalIngr"></div>
-
-      <button class="btn-order" onclick="openModal2()">
-        Перейти до замовлення
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT MODAL -->
-<div class="overlay" id="overlay2" onclick="handleOverlay2Click(event)">
+    <div class="overlay" id="overlay2">
   <div class="modal" id="contactModal">
-    <button class="modal-close" onclick="closeModal2()">×</button>
-
+    <button class="modal-close" id="closeContactBtn">×</button>
     <div class="modal-inner">
       <div class="modal-title">Оформлення замовлення</div>
-      <div class="modal-subtitle" id="orderSubtitle"></div>
-
       <div id="orderForm">
         <div class="form-group">
           <label class="form-label">Ім'я <span class="req">*</span></label>
@@ -542,7 +516,6 @@
             placeholder="Вікторія"
           />
         </div>
-
         <div class="form-group">
           <label class="form-label">Телефон <span class="req">*</span></label>
           <input
@@ -552,7 +525,6 @@
             placeholder="38 0__ ___-__-__"
           />
         </div>
-
         <div class="form-group">
           <label class="form-label">Коментар <span class="req">*</span></label>
           <textarea
@@ -561,13 +533,9 @@
             placeholder="Ваш коментар"
           ></textarea>
         </div>
-
-        <button class="btn-submit" onclick="submitOrder()">
-          Надіслати заявку
-        </button>
+        <button class="btn-submit" id="submitOrderBtn">Надіслати заявку</button>
       </div>
-
-      <div class="success-msg" id="successMsg">
+      <div class="success-msg" id="successMsg" style="display: none">
         <div class="icon">🎉</div>
         <h3>Заявку надіслано!</h3>
         <p>Ми зателефонуємо вам найближчим часом.</p>
