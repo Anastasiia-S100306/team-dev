@@ -509,40 +509,59 @@
     <!-- Modals -->
     
     <div class="overlay" id="overlay2">
-  <div class="modal" id="contactModal">
-    <button class="modal-close" id="closeContactBtn">×</button>
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="modal-close" id="closeContactBtn" aria-label="Закрити">×</button>
+
     <div class="modal-inner">
-      <div class="modal-title">Оформлення замовлення</div>
-      <div id="orderForm">
-        <div class="form-group">
-          <label class="form-label">Ім'я <span class="req">*</span></label>
+      <h2 class="modal-title" id="contactModalTitle">Оформлення замовлення</h2>
+
+      
+      <form id="orderForm" novalidate>
+
+        <div class="form-group" id="group-name">
+          
+          <label class="form-label" for="nameInput">Ім'я<span class="req">*</span></label>
           <input
             class="form-input"
             id="nameInput"
+            name="name"
             type="text"
             placeholder="Вікторія"
+            autocomplete="given-name"
           />
+          <span class="error-text" id="error-name">Введіть ваше ім'я</span>
         </div>
-        <div class="form-group">
-          <label class="form-label">Телефон <span class="req">*</span></label>
+
+        <div class="form-group" id="group-phone">
+          <label class="form-label" for="phoneInput">Телефон<span class="req">*</span></label>
           <input
-            class="form-input"
+            class="form-input phone-input"
             id="phoneInput"
+            name="phone"
             type="tel"
             placeholder="38 0__ ________"
+            autocomplete="tel"
           />
+          <span class="error-text" id="error-phone">Введіть коректний номер телефону</span>
         </div>
-        <div class="form-group">
-          <label class="form-label">Коментар <span class="req">*</span></label>
+
+        <div class="form-group" id="group-comment">
+          <label class="form-label" for="commentInput">Коментар<span class="req">*</span></label>
           <textarea
             class="form-textarea"
             id="commentInput"
+            name="comment"
             placeholder="Ваш коментар"
           ></textarea>
+          <span class="error-text" id="error-comment">Введіть коментар</span>
         </div>
-        <button class="btn-submit" id="submitOrderBtn">Надіслати заявку</button>
-      </div>
-      <div class="success-msg" id="successMsg" style="display: none">
+
+        
+        <button class="btn-submit" type="submit">Надіслати заявку</button>
+
+      </form>
+
+      <div class="success-msg" id="successMsg" style="display:none" aria-live="polite">
         <div class="icon">🎉</div>
         <h3>Заявку надіслано!</h3>
         <p>Ми зателефонуємо вам найближчим часом.</p>
