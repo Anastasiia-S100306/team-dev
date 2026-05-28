@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/team-dev/index.js"></script>
     <link rel="modulepreload" crossorigin href="/team-dev/assets/vendor-CLpypK-O.js">
     <link rel="stylesheet" crossorigin href="/team-dev/assets/vendor-BYJrGGVq.css">
-    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-D5PUJ3vO.css">
+    <link rel="stylesheet" crossorigin href="/team-dev/assets/index-DpNR0_-9.css">
   </head>
   <body>
     
@@ -509,18 +509,28 @@
     <!-- Modals -->
     
     <div class="overlay" id="overlay2">
-  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-    <button class="modal-close" id="closeContactBtn" aria-label="Закрити">×</button>
-
-    <div class="modal-inner">
-      <h2 class="modal-title" id="contactModalTitle">Оформлення замовлення</h2>
-
-      
+  <div
+    class="modal"
+    id="contactModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactModalTitle"
+  >
+    <button
+      class="modal-close"
+      type="button"
+      id="closeContactBtn"
+      aria-label="Закрити"
+    ><svg width="32" height="32">
+        <use href="/team-dev/img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-title" id="contactModalTitle">Оформлення замовлення</h2>
       <form id="orderForm" novalidate>
-
         <div class="form-group" id="group-name">
-          
-          <label class="form-label" for="nameInput">Ім'я<span class="req">*</span></label>
+          <label class="form-label" for="nameInput"
+            >Ім'я<span class="req">*</span></label
+          >
           <input
             class="form-input"
             id="nameInput"
@@ -533,7 +543,9 @@
         </div>
 
         <div class="form-group" id="group-phone">
-          <label class="form-label" for="phoneInput">Телефон<span class="req">*</span></label>
+          <label class="form-label" for="phoneInput"
+            >Телефон<span class="req">*</span></label
+          >
           <input
             class="form-input phone-input"
             id="phoneInput"
@@ -542,11 +554,15 @@
             placeholder="38 0__ ________"
             autocomplete="tel"
           />
-          <span class="error-text" id="error-phone">Введіть коректний номер телефону</span>
+          <span class="error-text" id="error-phone"
+            >Введіть коректний номер телефону</span
+          >
         </div>
 
         <div class="form-group" id="group-comment">
-          <label class="form-label" for="commentInput">Коментар<span class="req">*</span></label>
+          <label class="form-label" for="commentInput"
+            >Коментар<span class="req">*</span></label
+          >
           <textarea
             class="form-textarea"
             id="commentInput"
@@ -556,12 +572,15 @@
           <span class="error-text" id="error-comment">Введіть коментар</span>
         </div>
 
-        
         <button class="btn-submit" type="submit">Надіслати заявку</button>
-
       </form>
 
-      <div class="success-msg" id="successMsg" style="display:none" aria-live="polite">
+      <div
+        class="success-msg"
+        id="successMsg"
+        style="display: none"
+        aria-live="polite"
+      >
         <div class="icon">🎉</div>
         <h3>Заявку надіслано!</h3>
         <p>Ми зателефонуємо вам найближчим часом.</p>
